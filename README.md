@@ -9,7 +9,7 @@
 
 ## 🚴 Usage
 
-```
+
 
 ### 🛠️ Build with `wasm-pack build`
 
@@ -30,6 +30,46 @@ watch for changes:
 
 cargo watch -ci .gitignore -i "pkg/*" -s "wasm-pack test --firefox --headless"
 ```
+
+## Sample usage on a HTML page
+
+```html
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <script type="module">
+      import init, { run_model } from './pkg/dbscan_rust_wasm.js';
+
+      async function run() {
+        await init();
+
+        const result = run_model({
+          eps: 1.0,
+          min_points: 3,
+          inputs: [
+            [1.5, 2.2],
+            [1.0, 1.1],
+            [1.2, 1.4],
+            [0.8, 1.0],
+            [3.7, 4.0],
+            [3.9, 3.9],
+            [3.6, 4.1],
+            [10.0, 10.0],
+          ],
+        });
+
+        console.log(result);
+      }
+
+      run();
+    </script>
+  </body>
+</html>
+```
+
+Note: Page must be served from a web-server (e.g: python -m http.server)
 
 ## License
 
