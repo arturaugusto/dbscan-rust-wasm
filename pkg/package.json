@@ -1,0 +1,15 @@
+{
+  "name": "dbscan-rust-wasm",
+  "collaborators": [
+    "Artur Augusto Martins <arturaugusto@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "dbscan_rust_wasm_bg.wasm",
+    "dbscan_rust_wasm.js",
+    "dbscan_rust_wasm.d.ts"
+  ],
+  "module": "dbscan_rust_wasm.js",
+  "types": "dbscan_rust_wasm.d.ts",
+  "sideEffects": false
+}
