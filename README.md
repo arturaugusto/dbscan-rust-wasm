@@ -75,6 +75,8 @@ cargo watch -ci .gitignore -i "pkg/*" -s "wasm-pack test --firefox --headless"
 
 Note: Page must be served from a web-server (e.g: python -m http.server)
 
+See the example running on: https://arturaugusto.github.io/dbscan-rust-wasm/
+
 ## License
 
 Licensed under either of
