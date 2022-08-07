@@ -3,6 +3,9 @@
   <h1><code>dbscan-rust-wasm</code></h1>
 
   <strong>DBSCAN implemented in rust and compiled to WebAssembly.</strong>
+  <div>
+    Based on https://github.com/lazear/dbscan
+  </div>
 
 </div>
 
@@ -16,7 +19,8 @@
 ```
 wasm-pack build
 
-to  use without bundler:
+
+or to use it without bundler:
 
 wasm-pack build --target web
 ```
@@ -26,7 +30,7 @@ wasm-pack build --target web
 ```
 wasm-pack test --headless --firefox
 
-watch for changes:
+to watch for changes:
 
 cargo watch -ci .gitignore -i "pkg/*" -s "wasm-pack test --firefox --headless"
 ```
