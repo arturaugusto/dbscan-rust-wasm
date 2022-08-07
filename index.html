@@ -9,7 +9,7 @@
       async function run() {
         await init();
 
-        const result = run_model({
+        let data = {
           eps: 1.0,
           min_points: 3,
           inputs: [
@@ -22,9 +22,13 @@
             [3.6, 4.1],
             [10.0, 10.0],
           ],
-        });
-
+        };
+        const result = run_model(data);
+        
+        document.body.innerText += `Input data: \n${JSON.stringify(data, 0, 2)}\n`;
+        document.body.innerText += `Result: \n${JSON.stringify(result, 0, 2)}\n`;
         console.log(result);
+        window.run_model = run_model;
       }
 
       run();
