@@ -23,6 +23,13 @@ wasm-pack build
 or to use it without bundler:
 
 wasm-pack build --target web
+
+to use inside a webworker:
+
+wasm-pack build --target no-modules
+
+// for more options: https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target
+
 ```
 
 ### 🔬 Test in Headless Browsers with `wasm-pack test`
